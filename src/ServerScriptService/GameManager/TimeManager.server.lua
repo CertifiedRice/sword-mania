@@ -1,10 +1,18 @@
+-- Time
+
 local roundLength = 60
-local intermissionLength = 15
-local InRound = game.ReplicatedStorage.InRound
-local LobbySpawn = game.Workspace.Lobby.LobbySpawn
-local MapSpawn = game.Workspace.Map.MapSpawn 
+local intermissionLength = 3
+
+-- Values
+
 local Status = game.ReplicatedStorage.Status
 
+local InRound = game.ReplicatedStorage.InRound
+--Spawns
+local LobbySpawn = game.Workspace.Lobby.LobbySpawn
+local MapSpawn = game.Workspace.Map.MapSpawn
+
+-- Tools
 
 InRound.Changed:Connect(function()
     if InRound.Value == true then 
@@ -13,7 +21,7 @@ InRound.Changed:Connect(function()
             player.Character.Humanoid.Sit = true
             wait(.5)
             player.Character.Humanoid.Sit = false
-            
+
             char.HumanoidRootPart.CFrame = MapSpawn.CFrame
     end
 else
