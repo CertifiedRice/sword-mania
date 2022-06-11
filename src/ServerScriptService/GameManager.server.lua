@@ -1,8 +1,8 @@
-local roundLength = 90
+local roundLength = 60
 local intermissionLength = 15
 local InRound = game.ReplicatedStorage.InRound
-local LobbySpawn = game.Workspace.LobbySpawn
-local MapSpawn = game.Workspace.MapSpawn 
+local LobbySpawn = game.Workspace.Lobby.LobbySpawn
+local MapSpawn = game.Workspace.Map.MapSpawn 
 local Status = game.ReplicatedStorage.Status
 
 
