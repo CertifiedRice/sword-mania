@@ -15,4 +15,5 @@ local app = Roact.createElement("ScreenGui", {}, {
         UICorner = Roact.createElement("UICorner"),
     }),
 })
+
 Roact.mount(app, Players.LocalPlayer.PlayerGui)
