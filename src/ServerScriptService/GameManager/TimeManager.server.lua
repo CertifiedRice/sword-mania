@@ -1,7 +1,7 @@
 -- Time
 
-local roundLength = 3
-local intermissionLength = 5
+local roundLength = 60
+local intermissionLength = 15
 
 -- Values
 
@@ -9,8 +9,6 @@ local Status = game.ReplicatedStorage.Status
 
 local InRound = game.ReplicatedStorage.InRound
 --Spawns
--- local MapSpawn = game.Workspace.Map.MapSpawn
-
 local LobbySpawn = game.Workspace.Lobby.LobbySpawn
 local GreenGrassLandSpawn = game.Workspace.Maps.GreenGrassLand.MapSpawn 
 local DessertSpawn = game.Workspace.Maps.Desert.MapSpawn
@@ -27,7 +25,8 @@ InRound.Changed:Connect(function()
             wait(.5)
             player.Character.Humanoid.Sit = false
 
-            print(MapNumber)
+            -- print("Map ID:"..MapNumber)
+
             if MapNumber == 1 then
                 char.HumanoidRootPart.CFrame = GreenGrassLandSpawn.CFrame
             elseif MapNumber == 5 then
