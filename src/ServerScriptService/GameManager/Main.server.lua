@@ -3,10 +3,11 @@
 local roundLength = 60
 local intermissionLength = 15
 
+
 -- Values
 
 local Status = game.ReplicatedStorage.Status
-
+local minPlayers = game.ReplicatedStorage.minPlayers
 local InRound = game.ReplicatedStorage.InRound
 --Spawns
 local LobbySpawn = game.Workspace.Lobby.LobbySpawn
@@ -65,8 +66,13 @@ end
 
 end)
 
-
 local function roundTimer()
+    -- wait until there is more then 2 players
+    while #game.Players:GetChildren() < 2 do
+        wait(1)
+        Status.Value = "Atleast 2 players is required to play the game!"
+    end
+
     while wait() do
         for i = intermissionLength, 0, -1 do
             InRound.Value = false
