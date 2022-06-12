@@ -14,6 +14,10 @@ game.Players.PlayerAdded:Connect(function(player)
     deaths.Name = "Deaths"
     deaths.Value = 0
 
+    local levels = Instance.new("IntValue", leaderstats)
+    levels.Name = "Levels"
+    levels.Value = 1
+
     player.CharacterAdded:Connect(function(character)
         local humanoid = character:FindFirstChild("Humanoid")
         

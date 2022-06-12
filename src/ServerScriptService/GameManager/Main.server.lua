@@ -3,8 +3,7 @@
 local roundLength = 60
 local intermissionLength = 15
 
-
--- Values
+-- Value 
 
 local Status = game.ReplicatedStorage.Status
 local minPlayers = game.ReplicatedStorage.minPlayers
